@@ -6,7 +6,13 @@ module.exports = {
 
         const ong = await connection('ongs')
         .where('id', id)
-        .select('name')
+        .select([
+            'name',
+            'email', 
+            'whatsapp', 
+            'city', 
+            'uf'
+        ])
         .first();
 
         if(!ong){

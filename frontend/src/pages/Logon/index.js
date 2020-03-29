@@ -22,6 +22,10 @@ export default function Logon(){
             
             localStorage.setItem('ongId', id);
             localStorage.setItem('ongName', response.data.name);
+            localStorage.setItem('ongEmail', response.data.email);
+            localStorage.setItem('ongWhatsapp', response.data.whatsapp);
+            localStorage.setItem('ongCity', response.data.city);
+            localStorage.setItem('ongUf', response.data.uf);
 
             history.push('/profile');
             
